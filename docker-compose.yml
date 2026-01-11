@@ -1,0 +1,10 @@
+services:
+  base_build: &base_build
+    build:
+      context: ./
+    volumes:
+      - ./:/project
+  tests:
+    <<: *base_build
+    command:
+      python3 -m pytest

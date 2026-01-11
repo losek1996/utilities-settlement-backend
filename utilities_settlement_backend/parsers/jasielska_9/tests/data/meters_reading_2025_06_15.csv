@@ -1,0 +1,16 @@
+building_number,flat_number,utility_type,meter_number,value
+9,1,ZW,1,20
+9,1,CW,2,5
+9,1,CO,3,6
+9,2,ZW,4,25
+9,2,CW,5,6
+9,2,CO,6,6
+9,3,ZW,7,30
+9,3,CW,8,7
+9,3,CO,9,9
+9,4,ZW,10,25
+9,4,CW,11,6
+9,4,CO,12,9
+9,5,ZW,13,40
+9,5,CW,14,14
+9,5,CO,15,12
