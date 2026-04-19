@@ -35,12 +35,12 @@ def advance_payments_per_unit() -> dict[UtilityType, AdvancePaymentPerUnit]:
     return {
         UtilityType.ZW: AdvancePaymentPerUnit(
             utility_type=UtilityType.ZW,
-            unit="m^3",
+            unit="m³",
             advance_payment_per_unit=16,
         ),
         UtilityType.CW: AdvancePaymentPerUnit(
             utility_type=UtilityType.CW,
-            unit="m^3",
+            unit="m³",
             advance_payment_per_unit=54,
         ),
         UtilityType.CO: AdvancePaymentPerUnit(
@@ -50,7 +50,7 @@ def advance_payments_per_unit() -> dict[UtilityType, AdvancePaymentPerUnit]:
         ),
         UtilityType.CO_FIXED_FEE: AdvancePaymentPerUnit(
             utility_type=UtilityType.CO_FIXED_FEE,
-            unit="m^2",
+            unit="m²",
             advance_payment_per_unit=1.5,
         ),
     }
@@ -69,13 +69,13 @@ def utilities_cost() -> UtilitiesCost:
             UtilityType.ZW: UtilityWithMetersCost(
                 utility_type=UtilityType.ZW,
                 total_cost=1020,
-                unit_type="m^3",
+                unit_type="m³",
                 number_of_units=60,
             ),
             UtilityType.HEAT_ENERGY: UtilityWithMetersCost(
                 utility_type=UtilityType.HEAT_ENERGY,
                 total_cost=3400,
-                unit_type="m^3",
+                unit_type="m³",
                 number_of_units=25,
             ),
         },

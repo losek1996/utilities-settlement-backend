@@ -119,7 +119,7 @@ def generate_flat_settlement_output(
                         actual_cost_per_unit=output_dict[
                             "co_fixed_fee_actual_cost_per_unit"
                         ],
-                        unit="m^2",
+                        unit="m²",
                     ),
                 },
                 utilities_settlement_with_meters={
@@ -140,7 +140,7 @@ def generate_flat_settlement_output(
                             )
                         ],
                         actual_cost_per_unit=output_dict["zw_actual_cost_per_unit"],
-                        unit="m^3",
+                        unit="m³",
                     ),
                     UtilityType.CW: UtilitySettlementOutputWithMeters(
                         utility_type=UtilityType.CW,
@@ -159,7 +159,7 @@ def generate_flat_settlement_output(
                             )
                         ],
                         actual_cost_per_unit=output_dict["cw_actual_cost_per_unit"],
-                        unit="m^3",
+                        unit="m³",
                     ),
                     UtilityType.CO: UtilitySettlementOutputWithMeters(
                         utility_type=UtilityType.CO,

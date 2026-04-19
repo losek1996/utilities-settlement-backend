@@ -177,12 +177,12 @@ def test_advance_payments_parser(
             {
                 UtilityType.ZW: AdvancePaymentPerUnit(
                     utility_type=UtilityType.ZW,
-                    unit="m^3",
+                    unit="m³",
                     advance_payment_per_unit=16,
                 ),
                 UtilityType.CW: AdvancePaymentPerUnit(
                     utility_type=UtilityType.CW,
-                    unit="m^3",
+                    unit="m³",
                     advance_payment_per_unit=54,
                 ),
                 UtilityType.CO: AdvancePaymentPerUnit(
@@ -192,7 +192,7 @@ def test_advance_payments_parser(
                 ),
                 UtilityType.CO_FIXED_FEE: AdvancePaymentPerUnit(
                     utility_type=UtilityType.CO_FIXED_FEE,
-                    unit="m^2",
+                    unit="m²",
                     advance_payment_per_unit=1.5,
                 ),
             },
