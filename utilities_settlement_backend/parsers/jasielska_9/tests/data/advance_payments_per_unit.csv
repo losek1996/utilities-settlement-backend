@@ -1,5 +1,5 @@
 utility_type,unit,advance_payment_per_unit
-ZW,m^3,16
-CW,m^3,54
+ZW,m³,16
+CW,m³,54
 CO,GJ,140
-CO_FIXED_FEE,m^2,1.5
+CO_FIXED_FEE,m²,1.5
