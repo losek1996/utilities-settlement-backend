@@ -1,6 +1,6 @@
 import pandas as pd
 
-from datatypes import FlatId, MeterReading
+from datatypes import FlatId, MeterReading, MeterReadingStatus
 
 
 def parse_meter_readings(
@@ -14,6 +14,13 @@ def parse_meter_readings(
     result: dict[FlatId, list[MeterReading]] = {}
     for meter_reading_raw in meter_reading_rows:
         meter_reading_raw["date"] = meter_reading_date_str
+
+        if str(meter_reading_raw["value"]).strip() == MeterReadingStatus.FAILURE.value:
+            meter_reading_raw["value"] = -1
+            meter_reading_raw["status"] = MeterReadingStatus.FAILURE
+        else:
+            meter_reading_raw["status"] = MeterReadingStatus.OK
+
         meter_reading = MeterReading.model_validate(meter_reading_raw)
         flat_id = meter_reading.flat_id
 

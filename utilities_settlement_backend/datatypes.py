@@ -1,5 +1,5 @@
 from datetime import date
-from enum import Enum
+from enum import StrEnum
 from typing import Self
 
 from pydantic import BaseModel, field_validator, model_validator
@@ -110,7 +110,7 @@ class UtilitySettlementOutputWithMeters(UtilitySettlementOutputWithoutMeters):
         )
 
 
-class UtilityType(str, Enum):
+class UtilityType(StrEnum):
     ZW = "ZW"  # cold water
     CW = "CW"  # hot water
     CO = "CO"  # central heating
@@ -143,10 +143,16 @@ class MeterReadingInterval(BaseModel):
         return self
 
 
+class MeterReadingStatus(StrEnum):
+    OK = "OK"
+    FAILURE = "FAILURE"
+
+
 class MeterReading(Flat):
     utility_type: UtilityType
     meter_number: str
     date: date
+    status: MeterReadingStatus
     value: float
 
 

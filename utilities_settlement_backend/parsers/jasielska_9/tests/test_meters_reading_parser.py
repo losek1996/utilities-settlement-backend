@@ -5,7 +5,7 @@ import pandas as pd
 import pytest
 
 from csv_reader import read_csv_file
-from datatypes import FlatId, MeterReading, UtilityType
+from datatypes import FlatId, MeterReading, UtilityType, MeterReadingStatus
 from parsers.jasielska_9.meters_reading_parser import parse_meter_readings
 
 DATA_DIR = path.join(
@@ -32,6 +32,7 @@ def data(request) -> pd.DataFrame:
                         utility_type=UtilityType.ZW,
                         meter_number="1",
                         date=date(2025, 6, 15),
+                        status=MeterReadingStatus.OK,
                         value=20,
                     ),
                     MeterReading(
@@ -40,6 +41,7 @@ def data(request) -> pd.DataFrame:
                         utility_type=UtilityType.CW,
                         meter_number="2",
                         date=date(2025, 6, 15),
+                        status=MeterReadingStatus.OK,
                         value=5,
                     ),
                     MeterReading(
@@ -48,6 +50,7 @@ def data(request) -> pd.DataFrame:
                         utility_type=UtilityType.CO,
                         meter_number="3",
                         date=date(2025, 6, 15),
+                        status=MeterReadingStatus.OK,
                         value=6,
                     ),
                 ],
@@ -58,6 +61,7 @@ def data(request) -> pd.DataFrame:
                         utility_type=UtilityType.ZW,
                         meter_number="4",
                         date=date(2025, 6, 15),
+                        status=MeterReadingStatus.OK,
                         value=25,
                     ),
                     MeterReading(
@@ -66,6 +70,7 @@ def data(request) -> pd.DataFrame:
                         utility_type=UtilityType.CW,
                         meter_number="5",
                         date=date(2025, 6, 15),
+                        status=MeterReadingStatus.OK,
                         value=6,
                     ),
                     MeterReading(
@@ -74,6 +79,7 @@ def data(request) -> pd.DataFrame:
                         utility_type=UtilityType.CO,
                         meter_number="6",
                         date=date(2025, 6, 15),
+                        status=MeterReadingStatus.OK,
                         value=6,
                     ),
                 ],
@@ -84,6 +90,7 @@ def data(request) -> pd.DataFrame:
                         utility_type=UtilityType.ZW,
                         meter_number="7",
                         date=date(2025, 6, 15),
+                        status=MeterReadingStatus.OK,
                         value=30,
                     ),
                     MeterReading(
@@ -92,6 +99,7 @@ def data(request) -> pd.DataFrame:
                         utility_type=UtilityType.CW,
                         meter_number="8",
                         date=date(2025, 6, 15),
+                        status=MeterReadingStatus.OK,
                         value=7,
                     ),
                     MeterReading(
@@ -100,6 +108,7 @@ def data(request) -> pd.DataFrame:
                         utility_type=UtilityType.CO,
                         meter_number="9",
                         date=date(2025, 6, 15),
+                        status=MeterReadingStatus.OK,
                         value=9,
                     ),
                 ],
@@ -110,6 +119,7 @@ def data(request) -> pd.DataFrame:
                         utility_type=UtilityType.ZW,
                         meter_number="10",
                         date=date(2025, 6, 15),
+                        status=MeterReadingStatus.OK,
                         value=25,
                     ),
                     MeterReading(
@@ -118,6 +128,7 @@ def data(request) -> pd.DataFrame:
                         utility_type=UtilityType.CW,
                         meter_number="11",
                         date=date(2025, 6, 15),
+                        status=MeterReadingStatus.OK,
                         value=6,
                     ),
                     MeterReading(
@@ -126,6 +137,7 @@ def data(request) -> pd.DataFrame:
                         utility_type=UtilityType.CO,
                         meter_number="12",
                         date=date(2025, 6, 15),
+                        status=MeterReadingStatus.OK,
                         value=9,
                     ),
                 ],
@@ -136,6 +148,7 @@ def data(request) -> pd.DataFrame:
                         utility_type=UtilityType.ZW,
                         meter_number="13",
                         date=date(2025, 6, 15),
+                        status=MeterReadingStatus.OK,
                         value=40,
                     ),
                     MeterReading(
@@ -144,6 +157,7 @@ def data(request) -> pd.DataFrame:
                         utility_type=UtilityType.CW,
                         meter_number="14",
                         date=date(2025, 6, 15),
+                        status=MeterReadingStatus.OK,
                         value=14,
                     ),
                     MeterReading(
@@ -152,6 +166,7 @@ def data(request) -> pd.DataFrame:
                         utility_type=UtilityType.CO,
                         meter_number="15",
                         date=date(2025, 6, 15),
+                        status=MeterReadingStatus.OK,
                         value=12,
                     ),
                 ],
